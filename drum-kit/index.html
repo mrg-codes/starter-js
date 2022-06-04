@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>js-basics</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Font Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <!-- Font Awesome 6 Aprox-Media-Kit -->
+        <script src="https://kit.fontawesome.com/b91daad1ea.js" crossorigin="anonymous"></script>
+        <!-- Global Files -->
+        <link rel="stylesheet" href="../src/main.css">
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-container">
+                <h4>Drum Kit</h4>
+                <ul class="nav-links">
+                    <li>
+                        <a class="hover-middarken trans100" data-action="reset"><i class="fa-solid fa-arrow-rotate-right"></i></a>
+                    </li>
+                    <li><a href="../index.html" class="hover-middarken trans100"><i class="fas fa-house"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <img src="../src/images/schulte.jpg" alt="electronic music dj visual" class="main-img" lazyLoad>
+                <div class="btn-holder">
+                    <button data-key="bass" class="key playing">
+                        <kbd>A</kbd>
+                        <span class="sound">Bass</span>
+                    </button>
+                    <button data-key="ping" class="key">
+                        <kbd>S</kbd>
+                        <span class="sound">Ping</span>
+                    </button>
+                    <button data-key="string" class="key">
+                        <kbd>D</kbd>
+                        <span class="sound">String</span>
+                    </button>
+                    <button data-key="pad" class="key">
+                        <kbd>F</kbd>
+                        <span class="sound">Pad</span>
+                    </button>
+                    <button data-key="kick" class="key">
+                        <kbd>G</kbd>
+                        <span class="sound">Kick</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
