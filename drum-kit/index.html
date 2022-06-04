@@ -11,7 +11,7 @@
         <!-- Font Awesome 6 Aprox-Media-Kit -->
         <script src="https://kit.fontawesome.com/b91daad1ea.js" crossorigin="anonymous"></script>
         <!-- Global Files -->
-        <link rel="stylesheet" href="../src/main.css">
+        <link rel="stylesheet" href="./styles.css">
         <script src="./index.js" defer></script>
     </head>
     <body>
@@ -28,30 +28,43 @@
         </nav>
         <main>
             <div class="container">
-                <img src="../src/images/schulte.jpg" alt="electronic music dj visual" class="main-img" lazyLoad>
-                <div class="btn-holder">
-                    <button data-key="bass" class="key playing">
-                        <kbd>A</kbd>
-                        <span class="sound">Bass</span>
-                    </button>
-                    <button data-key="ping" class="key">
-                        <kbd>S</kbd>
-                        <span class="sound">Ping</span>
-                    </button>
-                    <button data-key="string" class="key">
-                        <kbd>D</kbd>
-                        <span class="sound">String</span>
-                    </button>
-                    <button data-key="pad" class="key">
-                        <kbd>F</kbd>
-                        <span class="sound">Pad</span>
-                    </button>
-                    <button data-key="kick" class="key">
-                        <kbd>G</kbd>
-                        <span class="sound">Kick</span>
-                    </button>
+                <div class="dj-window">
+                    <div class="btn-holder">
+                        <button data-key="65" class="key">
+                            <kbd>A</kbd>
+                            <span class="sound">Bass</span>
+                        </button>
+                        <button data-key="83" class="key">
+                            <kbd>S</kbd>
+                            <span class="sound">Kick</span>
+                        </button>
+                        <button data-key="68" class="key">
+                            <kbd>D</kbd>
+                            <span class="sound">Clap</span>
+                        </button>
+                    </div>
+                    <div class="btn-holder">
+                        <button data-key="90" class="key">
+                            <kbd>Z</kbd>
+                            <span class="sound">A A</span>
+                        </button>
+                        <button data-key="88" class="key">
+                            <kbd>X</kbd>
+                            <span class="sound">O O</span>
+                        </button>
+                        <button data-key="67" class="key">
+                            <kbd>C</kbd>
+                            <span class="sound">Je Je</span>
+                        </button>
+                    </div>
                 </div>
             </div>
+            <audio data-key="65" src="../src/sounds/bass.wav"></audio>
+            <audio data-key="83" src="../src/sounds/kick.wav"></audio>
+            <audio data-key="68" src="../src/sounds/clap.wav"></audio>
+            <audio data-key="90" src="../src/sounds/vocals-aa.wav"></audio>
+            <audio data-key="88" src="../src/sounds/vocals-oo.wav"></audio>
+            <audio data-key="67" src="../src/sounds/vocals-jeje.wav"></audio>
         </main>
     </body>
 </html>

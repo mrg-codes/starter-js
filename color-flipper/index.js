@@ -62,11 +62,10 @@ var randomFromArray = (sentArray) => {
     return Math.floor(Math.random() * sentArray.length)
 }
 
-function changeColor(targetColor, resetStep, actionType){
-    var resetStatus = ''
+function changeColor(targetColor, resetCycle, actionType){
     document.body.style.background = targetColor
     colorInfo.textContent = targetColor;
     colorInfo.style.color = targetColor;
-    if (resetStep) { colorListStep = 0; var resetStatus = 'refreshed'}
-    console.log(`New ${actionType} color ${targetColor} ${resetStatus}`)
+    (resetCycle) ? colorListStep = 0 : "";
+    console.log(`New ${actionType} color ${targetColor}`)
 }
