@@ -43,7 +43,7 @@ body {
     border-radius: .4rem;
     border: none;
     color: var(--lighttext);
-    transition: all 75ms ease-in-out;
+    transition: all 50ms ease-in-out;
     cursor: pointer;
 }
 
@@ -53,8 +53,8 @@ body {
 
 .playing {
     transform: scale(1.2);
-    box-shadow: 0 0 8px var(--primary);
-    border: 2px solid var(--lighttext);
+    box-shadow: 0 0 2rem var(--primary);
+    border: 1px solid var(--primary);
 }
 
 .playing kbd {
