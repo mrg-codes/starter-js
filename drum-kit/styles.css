@@ -21,6 +21,7 @@ body {
     background-image: url(../src/images/schulte.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0 90%;
 }
 
 .btn-holder {
@@ -41,10 +42,9 @@ body {
     justify-content: center;
     background-color: var(--darkbg);
     border-radius: .4rem;
-    border: none;
+    border: 1px solid var(--secondary);
     color: var(--lighttext);
     transition: all 50ms ease-in-out;
-    cursor: pointer;
 }
 
 .key span {
