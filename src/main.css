@@ -1,5 +1,5 @@
 :root {
-    --lighbg: #fefefe;
+    --lightbg: #fefefe;
     --coldbg: #f1f5f8;
     --navbg: #fefefe;
     --darkbg: #1d1d1d;
@@ -18,6 +18,8 @@
     --mid-darken: rgba(0, 0, 0, 0.3);
     --high-glow: rgba(255, 255, 255, 0.5);
     --high-darken: rgba(0, 0, 0, 0.5);
+    --max-glow: rgba(255, 255, 255, 0.8);
+    --max-darken: rgba(0, 0, 0, 0.8);
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 }
@@ -95,7 +97,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 0 1rem 0 1rem;
-    background-color: var(--lighbg);
+    background-color: var(--lightbg);
     box-shadow: 0 0 .3rem var(--dark-shadow);
     border-bottom: var(--mid-darken) 1px solid;
   }
