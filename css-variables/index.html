@@ -19,31 +19,33 @@
         
         <nav>
             <div class="nav-container">
-                <h4>PROJECTNAME</h4>
+                <h4>CSS Variables</h4>
                 <ul class="nav-links">
-                    <!-- <li><a class="hover-middarken trans100" data-action="reset"><i class="fa-solid fa-arrow-rotate-right"></i></a></li> -->
-                    <li><a href="../index.html" class="hover-middarken trans100"><i class="fas fa-house"></i></a></li>
+                    <li><a id="navbtn" class="hover-middarken trans100" data-action="reset"><i class="fa-solid fa-arrow-rotate-right"></i></a></li>
+                    <li><a id="navbtn" href="../index.html" class="hover-middarken trans100"><i class="fas fa-house"></i></a></li>
                 </ul>
             </div>
         </nav>
 
         <main>
             <div class="container">
+                <h2 class="cssvars-h2">Change CSS Variable values with <span class='hl'>JS</span></h2>
                 <div class="controls">
                     <div class="controls-group">
-                        <label for="spacing">Spacing:</label>
-                        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+                        <label for="padding">Padding:</label>
+                        <input id="padding" type="range" name="padding" min="0" max="60" value="0" data-sizing="px" data-default="0">
                     </div>
                 
                     <div class="controls-group">
                         <label for="blur">Blur:</label>
-                        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+                        <input id="blur" type="range" name="blur" min="0" max="10" value="0" data-sizing="px" data-default="0">
                     </div>
                     <div class="controls-group">
-                        <label for="base">Base Color</label>
-                        <input id="base" type="color" name="base" value="#ffc600">
+                        <label for="base-color">Base Color</label>
+                        <input id="base-color" type="color" name="base-color" value="#d6c100" data-default="#d6c100">
                     </div>
                 </div>
+                <img class="cssvars-img" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
             </div>
         </main>
     </body>

@@ -27,7 +27,12 @@
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 
-    --min-width: 480px
+    --min-width: 480px;
+
+    /* css variable change with js project localised vars */
+    --padding-cssjs: 10px;
+    --blur-cssjs: 10px;
+    --base-color-cssjs: #d6c100;
 }
 
 * {
@@ -59,7 +64,7 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
 }
-h2 {font-size: 2.25rem; text-transform: lowercase;}
+h2 {font-size: 2.25rem; text-transform: capitalize;}
 h3 {font-size: 1.8rem; text-transform: capitalize;}
 h4 {font-size: 1.25rem; text-transform: capitalize;}
 
@@ -256,7 +261,7 @@ nav {
 
 /* Color flipper styles */
 
-.container h2 {
+.flipper-h2 {
     padding: .4rem 1.2rem .4rem 1.2rem;
     letter-spacing: .05rem;
     color: var(--lighttext);
@@ -415,7 +420,31 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
     border-radius: .4rem;
-    background-color: var(--mid-glow);
+}
+
+.cssvars-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: var(--padding-cssjs);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 21 / 9;
+    border-radius: .4rem;
+    box-shadow: 0 0 .3rem .3rem var(--base-color-cssjs);
+    background-color: var(--base-color-cssjs);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(var(--blur-cssjs));
+}
+
+.cssvars-h2 {text-align: center;}
+.cssvars-h2 span.hl {
+    color: var(--base-color-cssjs);
+    filter: blur(var(--blur-cssjs));
 }
