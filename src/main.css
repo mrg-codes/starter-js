@@ -224,6 +224,15 @@ nav {
     margin: .25rem;
 }
 
+.text-holder {
+    display: flex;
+    margin: 1.25rem;
+    flex-direction: column;
+    border-radius: .4rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .key {
     position: relative;
     display: flex;
