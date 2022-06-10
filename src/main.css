@@ -503,15 +503,6 @@ nav {
         opacity 250ms ease-in-out;
 }
 
-.panel .trigger {
-    /* display: none; */
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    background-color: yellow;
-    opacity: .2;
-}
-
 .panel1 {background-image: url(../src/images/books.webp);}
 .panel2 { background-image: url(../src/images/space.jpeg);}
 .panel3 {background-image: url(../src/images/hologram.jpeg);}

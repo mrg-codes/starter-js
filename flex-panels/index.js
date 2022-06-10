@@ -13,11 +13,8 @@ function toggleOpen() {
 
 function toggleActive(e) {
     if(e.propertyName.includes('flex')){
-        // prevent from spam loop to add .active when element is closed
-        if(this.classList.contains('open')){
-            this.classList.add('active')
-            return
-        }
         this.classList.remove('active')
+        // prevent desync from spam looping
+        if(this.classList.contains('open')) this.classList.add('active')
     }
 }
