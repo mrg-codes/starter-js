@@ -531,3 +531,69 @@ nav {
 .panel > *:last-child {transform: translateY(100%);}
 .panel.active > *:last-child {transform: translateY(0);}
 .panel.open {flex: 7; font-size: 2.5rem;}
+
+/* Counter styles */
+
+.counter {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 50vh;
+}
+
+.counter-box {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .4rem;
+    background-color: var(--max-darken);
+    box-shadow: 0 0 .8rem 0 var(--mid-darken);
+}
+
+.counter-box >*{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-box .count {
+    width: 100%;
+    flex: 2;
+    color: var(--lighttext);
+    font-family: var(--secondary-font);
+    background-color: var(--mid-glow);
+    font-size: 4rem;
+}
+
+.counter-actions {
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    text-transform: uppercase;
+}
+
+.counter-actions .action-button {
+    display: flex;
+    position: relative;
+    flex: 3;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--secondary);
+    transition:
+        color 150ms ease-in-out,
+        background 150ms ease-in-out;
+}
+
+.action-button:hover {
+    color: var(--high-glow);
+}
