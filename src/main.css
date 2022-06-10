@@ -480,6 +480,7 @@ nav {
     overflow: hidden;
 }
 .panel {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -500,6 +501,15 @@ nav {
         flex 500ms cubic-bezier(0, 1.8, .5, 1),
         background 500ms cubic-bezier(0, 1.8, .5, 1),
         opacity 250ms ease-in-out;
+}
+
+.panel .trigger {
+    /* display: none; */
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    background-color: yellow;
+    opacity: .2;
 }
 
 .panel1 {background-image: url(../src/images/books.webp);}
