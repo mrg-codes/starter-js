@@ -24,7 +24,6 @@ function generateList(){
         const ref = project.reference
         const desc = project.description
         const main = project.main
-        const logic = project.logic
         const linkText = project.linktext
         return `
         <li>
@@ -33,7 +32,7 @@ function generateList(){
             <span class="name">${name}</span>
             </h3>
             <p>${desc}</p>
-            <a href=".${ref}${main}" class="bg-low-darken hover-primary trans250"><i class="fas fa-tv"></i>${linkText}</a>
+            <a href=".${ref}${main}" class="preview"><i class="fas fa-tv"></i>${linkText}</a>
         </li>
         `
     }).join('')
