@@ -749,7 +749,7 @@ nav {
     color: var(--secondary);
 }
 
-span.hl {
+.name .hl {
     text-transform: none;
     background-color: var(--warning);
 }
