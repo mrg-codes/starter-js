@@ -1,0 +1,68 @@
+{
+    "Projects":[
+        {
+            "id": "1",
+            "name": "Flex Panels",
+            "reference": "./projects/flex-panels/",
+            "description": "Flex panels for gallery type thingy. Nothing complicated, just a bunch of 💪📦's.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "2",
+            "name": "Type Ahead",
+            "reference": "./projects/type-ahead/",
+            "description": "Find stuff and update results while typing in the 🔍📦 Updating results live in a list bellow.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "3",
+            "name": "JS/CSS Variable Manipulation",
+            "reference": "./projects/css-variables/",
+            "description": "Edit CSS variables 🎨 with JS. Pretty self explanatory. Can edit 🥕 color, 🔥 blur and ⚖️ scale. All while updating view 🔴 live.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "4",
+            "name": "Smart Counter",
+            "reference": "./projects/type-ahead/",
+            "description": "⏲️ Counter w/ local storage 💾 - similar principle as the color-flipper project BUT involves storing, reading and clearing 🏚️ local browser storage.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "5",
+            "name": "Analog Clock",
+            "reference": "./projects/analog-clock/",
+            "description": "A not so 🦾 mechanical analog clock 🕥. Complete with digital counters and smooth arm 👉 action.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "6",
+            "name": "Drum Kit",
+            "reference": "./projects/drum-kit/",
+            "description": " 🥁 🎹 App that allows you to play basic sounds to create 🔥 awesome hit songs. ",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "7",
+            "name": "Color Flipper",
+            "reference": "./projects/color-flipper/",
+            "description": " 🟥 🟩 🟦 No explanation needed. An app that switches colors at the push of the 👇🚀 button. Pretty self explanatory.",
+            "main": "index.html",
+            "logic": "index.js"
+        },
+        {
+            "id": "8",
+            "name": "Array Cardio 1 (content filtration)",
+            "reference": "./projects/array-cardio-one/",
+            "description": "Practice run ⛏️ filtering out massive 💼 arrays of data to sort, order and display items on demand.",
+            "main": "index.html",
+            "logic": "index.js"
+        }
+    ]
+}

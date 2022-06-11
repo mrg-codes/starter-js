@@ -13,7 +13,9 @@ searchInput.addEventListener('change', showResults)
 searchInput.addEventListener('input', showResults)
 
 // grab data from endpoint and spread it into emnpty cities[]
-fetch(endpoint).then(blob => blob.json()).then(data => cities.push(...data))
+fetch(endpoint)
+    .then(blob => blob.json())
+    .then(data => cities.push(...data))
 
 function showResults(){
     let inputValue = this.value

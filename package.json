@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/realaprox/js-basics/issues"
   },
-  "homepage": "https://github.com/realaprox/js-basics#readme"
+  "homepage": "https://github.com/realaprox/js-basics#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node": "^17.7.2"
+  }
 }
