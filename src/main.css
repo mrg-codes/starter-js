@@ -57,6 +57,7 @@ body {
 
 li {list-style: none;}
 a {text-decoration: none; padding: 0 .2rem; cursor: pointer;}
+a:visited, a:active { color: inherit;}
 i {padding: 0 .5rem;}
 button, .btn {font-family: var(--secondary-font); padding: 0 .2rem;}
 ul {display: flex; flex-direction: row;}
@@ -206,13 +207,13 @@ nav {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    transition: all 150ms ease-in-out;
 }
 
 .lib-list li {
     margin: .4rem;
     display: flex;
     flex: 10 0 0;
+    cursor: default;
     min-width: 280px;
     position: relative;
     justify-content: space-between;
@@ -220,31 +221,46 @@ nav {
     border-radius: .4rem;
     flex-direction: column;
     background-color: var(--lightbg);
-    box-shadow: 0 0 .4rem 0 var(--low-darken);
-    cursor: default;
+    box-shadow: 0 0 .6rem 0 var(--low-darken);
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.lib-list li h3 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.lib-list span.id {
+    display: flex;
+    position: absolute;
+    width: 10%;
+    justify-content: center;
+    color: var(--low-darken);
+    opacity: .5;
+    font-size: 4rem;
+    transform: translateY(-30%) rotate(15deg);
+}
+.lib-list span.name {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.lib-list li >*{
+    z-index: 1;
+    text-align: center;
+    padding: .2rem .8rem;
 }
 
 .lib-list li:hover {
-    box-shadow: 0 0 1rem 0 var(--low-darken);
-    transition: all 150ms ease-in-out;
-}
-
-.lib-list h3{
-    text-align: center;
-    padding: .4rem 0 0 0;
-}
-
-.lib-list p {
-    text-align: center;
-    padding: 0 .4rem .4rem .4rem;
+    box-shadow: 0 0 .4rem 0 var(--mid-darken);
 }
 
 .lib-list a {
-    display: flex;
     margin: 0;
-    padding: .4rem;
-    align-items: center;
-    justify-content:center;
+    padding: .8rem 0;
+    color: var(--primary);
 }
 
 /* drum-kit styles */
