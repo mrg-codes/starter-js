@@ -25,11 +25,15 @@ function generateList(){
         const desc = project.description
         const main = project.main
         const logic = project.logic
+        const linkText = project.linktext
         return `
         <li>
-            <h3>${id} ${name}</h3>
+            <h3>
+            <span class="id">#${id}</span>
+            <span class="name">${name}</span>
+            </h3>
             <p>${desc}</p>
-            <a href=".${ref}${main}" class="bg-low-darken hover-primary trans100"><i class="fas fa-tv"></i>Live Preview</a>
+            <a href=".${ref}${main}" class="bg-low-darken hover-primary trans250"><i class="fas fa-tv"></i>${linkText}</a>
         </li>
         `
     }).join('')
