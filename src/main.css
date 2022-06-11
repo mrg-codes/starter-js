@@ -737,6 +737,10 @@ nav {
     text-transform: capitalize;
 }
 
+.suggestions li .name {
+    text-transform: capitalize;
+}
+
 .results {
     display: flex;
     flex-direction: row;
@@ -750,6 +754,6 @@ nav {
 }
 
 .name .hl {
-    text-transform: none;
+    text-transform: inherit;
     background-color: var(--warning);
 }
