@@ -234,6 +234,11 @@ nav {
 .lib-list li >*{
     z-index: 1;
     text-align: center;
+    transition:
+        filter 250ms ease-in-out,
+        opacity 250ms ease-in-out,
+        background 250ms ease-in-out,
+        transform 1000ms cubic-bezier(0, .7, 0, .7);
 }
 
 .lib-list li:hover {
@@ -241,6 +246,19 @@ nav {
 }
 .lib-list li:hover span.id {
     filter: blur(0);
+}
+.lib-list li:hover p {
+    opacity: 1;
+    filter: blur(0);
+}
+.lib-list li:hover span.name {
+    transform: translateY(0);
+} 
+
+.lib-list li h3 span.name {
+    transform: translateY(25%);
+    transition:
+        transform 1000ms cubic-bezier(0, .7, 0, .7);
 }
 
 .lib-list li h3 {
@@ -251,6 +269,8 @@ nav {
 }
 
 .lib-list p {
+    filter: blur(1px);
+    opacity: .5;
     padding: .8rem 1.6rem 1.6rem;
 }
 
