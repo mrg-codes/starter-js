@@ -619,6 +619,7 @@ nav {
     font-family: var(--secondary-font);
     background-color: var(--mid-glow);
     font-size: 4rem;
+    font-weight: 500;
 }
 
 .counter-actions {

@@ -41,7 +41,7 @@ function updateCounter(type) {
             localStorage.setItem(dataName, count)
             break
         case 'load' :
-            count = localStorage.getItem(dataName)
+            count = localStorage.getItem(dataName) || '0'
             console.log(count)
             break
         case 'clear' :
