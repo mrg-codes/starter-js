@@ -653,3 +653,102 @@ nav {
 .action-button:hover {
     color: var(--high-glow);
 }
+
+/* Type Ahead styles */
+
+.search-block {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    min-height: 25vh;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    width: 80%;
+    min-width: 240px;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form >* {
+    transition: 
+        opacity 100ms ease-in-out,
+        outline 250ms ease-in-out,
+        box-shadow 300ms ease-in-out;
+}
+
+.search {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    opacity: .8;
+    border-radius: .4rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid var(--low-darken);
+    outline: 8px solid var(--mid-darken);
+    margin: 8px;
+    box-shadow: 0 0 .2rem 0 var(--low-darken);
+    color: var(--darktext);
+}
+
+.search:hover {
+    opacity: 1;
+    box-shadow: 0 0 .8rem 0 var(--mid-darken);
+}
+.search-form *:focus {
+    opacity: 1;
+    outline-color: var(--primary);
+    box-shadow: 0 0 2rem .4rem var(--low-darken);
+}
+
+.suggestions {
+    display: flex;
+    width: 98%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--lightbg);
+    max-height: 50vh;
+    overflow: scroll;
+    border: 1px solid var(--low-darken);
+}
+.suggestions >*{
+    display: flex;
+    align-items: center;
+    padding: .4rem;
+    border: 1px solid var(--low-darken);
+    border-top: 0;
+    text-transform: capitalize;
+}
+.sugg-city {
+    font-size: 1rem;
+    color: var(--darktext);
+}
+.sugg-state {
+    font-size: .625rem;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.results .population {
+    margin: 0 1.2rem 0 1.2rem;
+    font-size: .625rem;
+    color: var(--secondary);
+}
+
+span.hl {
+    text-transform: none;
+    background-color: var(--warning);
+}
