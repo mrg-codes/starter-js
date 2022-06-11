@@ -28,6 +28,8 @@
     --secondary-font: 'Open Sans', sans-serif;
 
     --min-width: 480px;
+    --max-width-cont: 60vw;
+    --max-width-lib: 70vw;
 
     /* css variable change with js project localised vars */
     --padding-cssjs: 10px;
@@ -128,7 +130,7 @@ h4 {font-size: 1.25rem; text-transform: capitalize;}
     display: flex;
     flex-flow: column;
     margin: 0 auto;
-    width: 60vw;
+    width: var(--max-width-cont);
     top: 0;
     min-width: var(--min-width);
     position: relative;
@@ -187,38 +189,53 @@ nav {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-    width: 60vw;
+    max-width: var(--max-width-lib);
     min-width: var(--min-width);
     margin: 1rem auto;
+    flex: 10 0 0;
+    height: auto;
+    min-height: 100vh;
+    font-size: .725rem;
 }
 
 .lib-list {
     padding: .45rem;
     display: flex;
-    flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .lib-list li {
     margin: .4rem;
-    width: 100%;
     display: flex;
+    flex: 10 0 0;
+    min-width: 280px;
+    position: relative;
+    justify-content: space-between;
     overflow: hidden;
     border-radius: .4rem;
     flex-direction: column;
-    justify-content: space-between;
     background-color: var(--lightbg);
     box-shadow: .5rem .5rem 32px var(--light-shadow);
 }
 
-.lib-list h3, .lib-list p {text-align: center; padding: .5rem;}
+.lib-list h3{
+    text-align: center;
+    padding: .4rem 0 0 0;
+}
+
+.lib-list p {
+    text-align: center;
+    padding: 0 .4rem .4rem .4rem;
+}
 
 .lib-list a {
+    display: flex;
     margin: 0;
     padding: .4rem;
-    display: flex;
     align-items: center;
     justify-content:center;
 }
