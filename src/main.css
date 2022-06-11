@@ -475,19 +475,18 @@ nav {
 .panels {
     display: flex;
     flex: 1;
-    flex-direction: row;
-    justify-content: center;
     overflow: hidden;
 }
 .panel {
-    position: relative;
     display: flex;
+    flex: 3;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: -5%;
-    flex: 5;
     opacity: .85;
+    filter: blur(.02rem);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -500,8 +499,9 @@ nav {
         font-size 250ms cubic-bezier(0, 1.8, .5, 1),
         flex 500ms cubic-bezier(0, 1.8, .5, 1),
         background 500ms cubic-bezier(0, 1.8, .5, 1),
-        /* box-shadow 250ms ease-in-out, */
-        opacity 150ms ease-in-out;
+        box-shadow 250ms ease-in-out,
+        opacity 500ms cubic-bezier(0, 0, .5, 1),
+        blur 250ms ease-in-out;
 }
 
 .panel1 {background-image: url(../src/images/books.webp);}
@@ -511,7 +511,7 @@ nav {
 .panel5 { background-image: url(../src/images/cool.jpg);}
 .panel6 {background-image: url(../src/images/roboarm.jpeg);}
 
-.panel * {
+.panel >* {
     display: flex;
     width: 100%;
     flex: 1;
@@ -523,14 +523,14 @@ nav {
 
 .panel:hover{
     opacity: 1;
+    filter: blur(0);
     /* box-shadow: inset 0 0 2rem var(--low-glow); */
 }
 
-.panel > *:first-child {transform: translateY(-100%);}
-.panel.active > *:first-child {transform: translateY(0);}
-.panel > *:last-child {transform: translateY(100%);}
-.panel.active > *:last-child {transform: translateY(0);}
-.panel.open {flex: 7; font-size: 2.5rem;}
+.panel > *:first-child {transform: translateY(-100%); opacity:0;}
+.panel > *:last-child {transform: translateY(100%); opacity:0;}
+.panel.active > *:first-child, .panel.active > *:last-child { transform: translateY(0); opacity:.5;}
+.panel.open {flex-grow: 5; font-size: 2.5rem; filter: blur(0);}
 
 /* Counter styles */
 
