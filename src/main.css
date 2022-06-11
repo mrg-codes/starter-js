@@ -562,7 +562,11 @@ nav {
     background-color: var(--max-darken);
     box-shadow: 0 0 .8rem 0 var(--mid-darken);
 }
-
+.counter-controlbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .counter-box >*{
     display: flex;
     flex-direction: column;
@@ -586,7 +590,7 @@ nav {
     text-transform: uppercase;
 }
 
-.counter-actions .action-button {
+.action-button {
     display: flex;
     position: relative;
     flex: 3;
@@ -600,7 +604,14 @@ nav {
         color 150ms ease-in-out,
         background 150ms ease-in-out;
 }
-
+.action-link {
+    padding: .2rem;
+    transition: all 150ms ease-in-out;
+}
+.action-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
 .action-button:hover {
     color: var(--high-glow);
 }
