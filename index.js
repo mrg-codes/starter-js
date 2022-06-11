@@ -4,7 +4,7 @@ let structureData = []
 let projectList = []
 const libList = document.querySelector('.lib-list')
 
-window.onload = generateList
+window.onload = setTimeout(generateList, 500)
 // grab projectr data from json
 fetch(url)
     .then(res => res.json())
