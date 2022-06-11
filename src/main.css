@@ -33,6 +33,9 @@
     --padding-cssjs: 10px;
     --blur-cssjs: 10px;
     --base-color-cssjs: #d6c100;
+
+    /* counter variables */
+    --counter-color: var(--lighttext)
 }
 
 * {
@@ -84,6 +87,24 @@ h4 {font-size: 1.25rem; text-transform: capitalize;}
 .bg-success { background-color: var(--success); color: var(--lighttext);}
 .bg-warning { background-color: var(--warning); color: var(--lighttext);}
 .bg-danger { background-color: var(--danger); color: var(--lighttext);}
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-danger { color: var(--danger); }
+
+.hover-text-primary:hover { color: var(--primary); }
+.hover-text-secondary:hover { color: var(--secondary); }
+.hover-text-success:hover { color: var(--success); }
+.hover-text-warning:hover { color: var(--warning); }
+.hover-text-danger:hover { color: var(--danger); }
+.hover-text-lowdarken:hover { color: var(--low-darken); }
+.hover-text-middarken:hover { color: var(--mid-darken); }
+.hover-text-highdarken:hover { color: var(--high-darken); }
+.hover-text-lowlgow:hover { color: var(--low-glow); }
+.hover-text-midglow:hover { color: var(--mid-glow); }
+.hover-text-highglow:hover { color: var(--high-glow); }
 
 .hover-primary:hover { background-color: var(--primary); color: var(--lighttext);}
 .hover-secondary:hover { background-color: var(--secondary); color: var(--lighttext);}
@@ -559,7 +580,7 @@ nav {
     justify-content: center;
     align-items: center;
     border-radius: .4rem;
-    background-color: var(--max-darken);
+    background-color: var(--mid-darken);
     box-shadow: 0 0 .8rem 0 var(--mid-darken);
 }
 .counter-controlbox {
@@ -577,7 +598,7 @@ nav {
 .counter-box .count {
     width: 100%;
     flex: 2;
-    color: var(--lighttext);
+    color: var(--counter-color);
     font-family: var(--secondary-font);
     background-color: var(--mid-glow);
     font-size: 4rem;
@@ -605,11 +626,11 @@ nav {
         background 150ms ease-in-out;
 }
 .action-link {
-    padding: .2rem;
+    color: var(--secondary);
+    padding: .4rem 1rem;
     transition: all 150ms ease-in-out;
 }
 .action-link:hover {
-    color: var(--primary);
     text-decoration: underline;
 }
 .action-button:hover {
