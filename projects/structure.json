@@ -72,5 +72,15 @@
             "logic": "index.js",
             "linktext": "Live Preview"
         }
+    ],
+    "Socials": [
+        {
+            "youtube": "aproxplays",
+            "twitter": "aproxplays",
+            "instsagram": "aproxplays",
+            "twitch": "realaprox",
+            "discord": "Aprox#1259"
+        }
     ]
+
 }
