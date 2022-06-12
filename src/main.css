@@ -210,29 +210,32 @@ footer::before {
 }
 .footer-container {
     display: flex;
+    flex: 1 0;
     position: relative;
     flex-direction: column;
     justify-content: start;
+    align-items: center;
     max-width: var(--max-width-lib);
     min-width: var(--min-width);
     margin: 1rem auto;
-    flex: 1;
-    height: auto;
     cursor: default;
 }
 .foot-socials {
     display: flex;
-    flex: 1;
+    flex: 1 0;
     flex-direction: row;
-    padding: 1rem 3rem;
     justify-content: space-between;
+    width: 100%;
+    max-width: 640px;
 }
 
 .foot-social {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
     font-size: 2rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     color: var(--secondary);
     transition:
         color 250ms ease-out,
@@ -240,7 +243,7 @@ footer::before {
 }
 .foot-social:hover {
     color: var(--darktext);
-    transform: translateY(-8%);
+    transform: translateY(-4%);
 }
 
 .foot-copy {
@@ -251,7 +254,6 @@ footer::before {
     color: var(--secondary);
     
 }
-
 
 /* Library main page styles */
 
