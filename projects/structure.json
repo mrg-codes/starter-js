@@ -71,16 +71,59 @@
             "main": "index.html",
             "logic": "index.js",
             "linktext": "Live Preview"
+        },
+        {
+            "id": "9",
+            "name": "Array Cardio 2",
+            "reference": "./projects/array-cardio-two/",
+            "description": "Another, more in depth array practice project to really 🧠 understand the array manipulation and its ⚙️ workings.",
+            "main": "index.html",
+            "logic": "index.js",
+            "linktext": "Live Preview"
         }
     ],
     "Socials": [
         {
-            "youtube": "aproxplays",
-            "twitter": "aproxplays",
-            "instsagram": "aproxplays",
-            "twitch": "realaprox",
-            "discord": "Aprox#1259"
+            "name": "youtube",
+            "link": "https://youtube.com/",
+            "customlink": "aproxplays",
+            "username": "aproxplays"
+        },
+        {
+            "name": "twitter",
+            "link": "https://twitter.com/",
+            "customlink": "aproxplays",
+            "username": "aproxplays"
+        },
+        {
+            "name": "discord",
+            "link": "https://discord.gg/nSAWH58hDM",
+            "customlink": "",
+            "username": "Aprox#1259"
+        },
+        {
+            "name": "github",
+            "link": "https://github.com/",
+            "customlink": "mrg-codes",
+            "username": "mrg-codes"
+        },
+        {
+            "name": "instagram",
+            "link": "https://twitter.com/",
+            "customlink": "aproxplays",
+            "username": "aproxplays"
+        },
+        {
+            "name": "twitch",
+            "link": "https://twitch.com/",
+            "customlink": "realaprox",
+            "username": "realaprox"
+        },
+        {
+            "name": "reddit",
+            "link": "https://reddit.com/",
+            "customlink": "realaprox",
+            "username": "realaprox"
         }
     ]
-
 }
