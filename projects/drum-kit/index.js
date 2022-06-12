@@ -34,5 +34,5 @@ function touchPlay(){
 }
 // for each element in array check for style transition ending and the ncall 'removePlayIndicator' function
 keys.forEach(key => key.addEventListener('transitionend', removePlayIndicator))
-keys.forEach(key => key.addEventListener('click', touchPlay))
+keys.forEach(key => key.addEventListener('pointerdown', touchPlay))
 window.addEventListener('keydown', playSound)
