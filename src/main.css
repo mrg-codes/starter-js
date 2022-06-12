@@ -29,7 +29,7 @@
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 
-    --min-width: 480px;
+    --min-width: 380px;
     --max-width-cont: 60vw;
     --max-width-lib: 70vw;
 
@@ -283,9 +283,9 @@ footer::before {
     margin: .8rem;
     display: flex;
     flex: 1;
+    min-width: var(--min-width);
     cursor: pointer;
     color: inherit;
-    min-width: 280px;
     position: relative;
     justify-content: space-between;
     overflow: hidden;
@@ -327,7 +327,6 @@ footer::before {
 }
 
 .lib-list .preview p {
-    filter: blur(1px);
     opacity: .8;
     padding: .8rem 1.6rem 1.6rem;
 }
@@ -339,7 +338,7 @@ footer::before {
     justify-content: center;
     color: var(--low-darken);
     opacity: .5;
-    filter: blur(1px);
+    filter: blur(2px);
     font-size: 4rem;
     transform: translateY(-30%) rotate(15deg);
 }
@@ -377,7 +376,7 @@ footer::before {
 }
 
 .lib-list .preview:hover .id {
-    filter: blur(0);
+    filter: blur(1px);
 }
 .lib-list .preview:hover p {
     opacity: 1;
@@ -386,6 +385,32 @@ footer::before {
 .lib-list .preview:hover .name {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* lib list phone variant */
+@media (max-width: 1280px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .lib-list .preview p {
+        opacity: 1;
+    }
+
+    .lib-list .preview:hover .id {
+        filter: blur(2px);
+    }
+
+    .lib-list .preview .name {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .guide >* {
+        transform: translateX(0);
+        color: var(--primary);
+    }
 }
 
 /* drum-kit styles */

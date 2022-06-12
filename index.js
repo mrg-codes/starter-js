@@ -35,7 +35,7 @@ async function generateLists(){
         const main = project.main
         const linkText = project.linktext
         return `
-        <a href=".${ref}${main}" target="_blank" class="preview">
+        <a href="${ref}${main}" target="_blank" class="preview">
         <li>
             <h3>
             <span class="id">#${id}</span>
