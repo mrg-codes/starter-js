@@ -1,7 +1,7 @@
 // ⚠️ DEBUG ON?
 const debugOn = false
 // other vars
-const url = '/projects/structure.json'
+const url = './projects/structure.json'
 let structureData = []
 let projectList = []
 let socialList = []
