@@ -30,7 +30,7 @@
         {
             "id": "4",
             "name": "Smart Counter",
-            "reference": "./projects/type-ahead/",
+            "reference": "./projects/smart-counter/",
             "description": "⏲️ Counter w/ local storage 💾 - similar principle as the color-flipper project BUT involves storing, reading and clearing 🏚️ local browser storage.",
             "main": "index.html",
             "logic": "index.js",
