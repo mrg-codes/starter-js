@@ -29,7 +29,7 @@
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 
-    --min-width: 480px;
+    --min-width: 380px;
     --max-width-cont: 60vw;
     --max-width-lib: 70vw;
 
@@ -283,9 +283,9 @@ footer::before {
     margin: .8rem;
     display: flex;
     flex: 1;
+    min-width: var(--min-width);
     cursor: pointer;
     color: inherit;
-    min-width: 280px;
     position: relative;
     justify-content: space-between;
     overflow: hidden;
@@ -389,6 +389,10 @@ footer::before {
 
 /* lib list phone variant */
 @media (max-width: 1280px) {
+
+    body {
+        overflow-x: hidden;
+    }
 
     .lib-list .preview p {
         opacity: 1;
