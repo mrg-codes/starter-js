@@ -1,4 +1,6 @@
-// vars
+// ⚠️ DEBUG ON?
+const debugOn = false
+// other vars
 const url = '/projects/structure.json'
 let structureData = []
 let projectList = []
@@ -6,20 +8,22 @@ let socialList = []
 const libList = document.querySelector('.lib-list')
 const footerSocials = document.querySelector('.foot-socials')
 
-// grab projectr data from json
-fetch(url)
+// 🔢 asynch function to make sure page laods properly
+async function generateLists(){
+
+    // grab projectr data from json
+    // ⌚ wait for fetch to return promise before going forward
+    await fetch(url)
     .then(res => res.json()).then(data => {
         structureData.push(data)
         projectList.push(...data.Projects) 
-        socialList.push(...data.Socials) 
+        socialList.push(...data.Socials)
+        logging('grabbed listings')
     }).catch((error) => {
         console.error(error)
-})
+    })
 
-function generateLists(){
-    // check fi project lsit is not empty
-    if(!projectList) return console.log(`no list`)
-
+    logging('triggered')
     // generate libraries
     const projectPanelHtml = projectList.map(project => {
         const id = project.id
@@ -39,6 +43,7 @@ function generateLists(){
         </li>
         `
     }).join('')
+    logging('lib-list generated')
 
     // generate footer stuff
     const footerSocialsHtml = socialList.map(social => {
@@ -51,9 +56,13 @@ function generateLists(){
             <i class="fa-brands fa-${name}"></i></a>
         `
     }).join('')
+    logging('footer generated')
     footerSocials.innerHTML = footerSocialsHtml
     libList.innerHTML = projectPanelHtml
+    logging('contentys pushed')
 }
 
+function logging(msg) { if(debugOn) return console.log(msg) }
+
 // 👉 LAST THING TO DO!!! 👈 ❗❗❗
-window.onload = generateLists
+window.onload = (event) => { generateLists() }
