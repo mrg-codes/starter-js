@@ -33,14 +33,16 @@ async function generateLists(){
         const main = project.main
         const linkText = project.linktext
         return `
+        <a href=".${ref}${main}" target="_blank" class="preview">
         <li>
             <h3>
             <span class="id">#${id}</span>
             <span class="name">${name}</span>
             </h3>
             <p>${desc}</p>
-            <a href=".${ref}${main}" target="_blank" class="preview"><i class="fas fa-tv"></i>${linkText}</a>
+            <span class="guide"><t>${linkText}</t><i class="fa-solid fa-arrow-right"></i></span>
         </li>
+        </>
         `
     }).join('')
     logging('lib-list generated')
