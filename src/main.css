@@ -888,6 +888,7 @@ footer::before {
 }
 
 .suggestions li .name {
+    isolation: isolate;
     text-transform: capitalize;
 }
 
@@ -905,5 +906,6 @@ footer::before {
 
 .name .hl {
     text-transform: inherit;
+    z-index: -1;
     background-color: var(--warning);
 }

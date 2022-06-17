@@ -3,12 +3,14 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 
 const searchInput = document.querySelector('.search')
 const suggestions = document.querySelector('.suggestions-box')
+
 const defaultSuggestions = `
 <li class="sugg-city">Filter City</li>
 <li class="sugg-state">And/Or State</li>
 `
 let cities = []
 
+// update shown results
 searchInput.addEventListener('change', showResults)
 searchInput.addEventListener('input', showResults)
 
@@ -18,7 +20,7 @@ fetch(endpoint)
     .then(data => cities.push(...data))
 
 function showResults(){
-    let inputValue = this.value
+    let inputValue = searchInput.value
     // check agains empty search
     if(inputValue.length < 1) return suggestions.innerHTML = ''
     const mathList = findMatches(this.value, cities)
@@ -27,14 +29,13 @@ function showResults(){
         const cityName = place.city.replace(regex, `<span class='hl'>${this.value}</span>`)
         const stateName = place.state.replace(regex, `<span class='hl'>${this.value}</span>`)
         return `
-        <li class='results'>
+        <li class='results' onclick='resultClick("${place.city}", "${place.state}")'>
             <span class='name'>${cityName}, ${stateName}</span>
             <span class='population'>${numberWithCommas(place.population)}</span>
         </li>
         `;
     }).join('')
     suggestions.innerHTML = `<ul class='suggestions'>${html}</ul>`
-    
 }
 
 function findMatches(stringToMatch, cities){
@@ -47,4 +48,10 @@ function findMatches(stringToMatch, cities){
 // pulled from stackoverflow
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
+}
+
+function resultClick(name){
+    // update value and results
+    searchInput.value = name
+    searchInput.dispatchEvent(new Event('change'))
+}
