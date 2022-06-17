@@ -29,7 +29,8 @@
     --primary-font: 'Poppins', sans-serif;
     --secondary-font: 'Open Sans', sans-serif;
 
-    --min-width: 380px;
+    --min-width: 240px;
+    --max-width: 420px;
     --max-width-cont: 60vw;
     --max-width-lib: 70vw;
 
@@ -51,6 +52,7 @@ html {scroll-behavior: smooth;}
 body {
     display: flex;
     min-height: 100vh;
+    overflow-x: hidden;
     flex-direction: column;
     justify-content: start;
     font-family: var(--primary-font);
@@ -281,7 +283,12 @@ footer::before {
 }
 
 .lib-list {
-    padding: .45rem;
+    padding: 0;
+    border-radius: .4rem;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1px solid var(--low-darken);
+    box-shadow: 0 0 .6rem 0 var(--low-darken);
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -289,16 +296,15 @@ footer::before {
 }
 
 .lib-list .preview {
-    margin: .8rem;
     display: flex;
     flex: 1;
     min-width: var(--min-width);
+    max-width: var(--max-width-lib);
     cursor: pointer;
     color: inherit;
     position: relative;
     justify-content: space-between;
     overflow: hidden;
-    border-radius: .4rem;
     flex-direction: column;
     background-color: var(--lightbg);
     box-shadow: 0 0 .2rem 0 var(--low-darken);
@@ -322,6 +328,7 @@ footer::before {
 .lib-list .preview li >*{
     text-align: center;
     transition:
+        z-index 350ms ease-out,
         filter 350ms ease-out,
         opacity 350ms ease-out,
         background 350ms ease-out,
@@ -347,14 +354,13 @@ footer::before {
     justify-content: center;
     color: var(--low-darken);
     opacity: .5;
-    filter: blur(2px);
+    filter: blur(1px);
     font-size: 4rem;
     transform: translateY(-30%) rotate(15deg);
 }
 
 .lib-list .preview .name {
     opacity: .8;
-    transform: translateY(25%);
     transition:
         transform 1000ms cubic-bezier(0, .7, 0, .7);
 }
@@ -368,7 +374,6 @@ footer::before {
 }
 
 .guide >* {
-    transform: translateX(-15%);
     transition: 
         color 250ms ease-out,
         transform 1000ms cubic-bezier(0, .7, 0, .7);
@@ -376,50 +381,13 @@ footer::before {
 .guide i {padding: 0 .5rem;}
 
 .lib-list .preview:hover {
+    z-index: 2;
     box-shadow: 0 0 .6rem 0 var(--low-darken);
 }
 
-.lib-list .preview:hover i, .lib-list .preview:hover t {
+.lib-list .preview:hover i,
+.lib-list .preview:hover t {
     color: var(--primary);
-    transform: translateX(0);
-}
-
-.lib-list .preview:hover .id {
-    filter: blur(1px);
-}
-.lib-list .preview:hover p {
-    opacity: 1;
-    filter: blur(0);
-}
-.lib-list .preview:hover .name {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* lib list phone variant */
-@media (max-width: 1280px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .lib-list .preview p {
-        opacity: 1;
-    }
-
-    .lib-list .preview:hover .id {
-        filter: blur(2px);
-    }
-
-    .lib-list .preview .name {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .guide >* {
-        transform: translateX(0);
-        color: var(--primary);
-    }
 }
 
 /* drum-kit styles */
@@ -640,7 +608,7 @@ footer::before {
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: var(--lighttext);
@@ -705,7 +673,7 @@ footer::before {
 .panel {
     display: flex;
     flex: 10 0 0;
-    min-width: 140px;
+    min-width: 100px;
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -722,10 +690,10 @@ footer::before {
     text-transform: uppercase;
     text-shadow: 0 0 .4rem var(--max-darken);
     transition:
-        font-size 250ms cubic-bezier(0, 1.8, .2, 1),
-        flex 750ms cubic-bezier(0, 1.8, .2, 1),
-        background 750ms cubic-bezier(0, 1.8, .2, 1),
-        transform 750ms cubic-bezier(0, 1.8, .2, 1),
+        font-size 250ms cubic-bezier(0, 1.5, .2, 1),
+        flex 750ms cubic-bezier(0, 1.5, .2, 1),
+        background 750ms cubic-bezier(0, 1.5, .2, 1),
+        transform 750ms cubic-bezier(0, 1.5, .2, 1),
         opacity 200ms ease-in-out,
         box-shadow 200ms ease-in-out,
         blur 250ms ease-in-out;
