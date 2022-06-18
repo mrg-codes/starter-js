@@ -910,6 +910,10 @@ footer::before {
 
 /* HTML Canvas styles */
 
+.scroll-lock {
+    overflow: hidden;
+}
+
 .canvas {
     border-radius: .4rem;
     box-shadow: 0 0 2rem .4rem var(--low-darken);
