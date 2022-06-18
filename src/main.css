@@ -796,6 +796,9 @@ footer::before {
     padding: .4rem 1rem;
     transition: all 150ms ease-in-out;
 }
+.action-link >* {
+    padding: 0 .4rem 0 0;
+}
 .action-link:hover {
     text-decoration: underline;
 }
@@ -922,7 +925,15 @@ footer::before {
     flex-direction: column;
 }
 
+.canvas-box >* {
+    display: flex;
+}
+
 .canvas {
     border-radius: .4rem;
     box-shadow: 0 0 2rem .4rem var(--low-darken);
+}
+
+.canvas-controls {
+    margin: .2rem;
 }

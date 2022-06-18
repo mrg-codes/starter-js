@@ -1,6 +1,8 @@
 // grab elements
 const canvas = document.querySelector('#canvas')
 const resetBtn = document.querySelector('.nav-links a[data-action="reset"]')
+const bSize = document.querySelector('.canvas-btn[data-action="bSize"]')
+const bColor = document.querySelector('.canvas-btn[data-action="bColor"]')
 
 // canvas vars
 let isDrawing = false
@@ -8,7 +10,7 @@ let lastX, lastY
 [lastX, lastY] = [0, 0]
 // make touch coords fixed to touch center
 let touchOffsetX = 50
-let touchOffsetY = 48
+let touchOffsetY = 96
 let hue = 0
 let hueStep = .1
 let dynamicBrushSize = true
@@ -19,9 +21,10 @@ let blendMode = 'color'
 
 // canvas params
 const ctx = canvas.getContext('2d')
-const canvasSizeLimit = .9
-canvas.width = window.innerWidth * canvasSizeLimit
-canvas.height = window.innerHeight * canvasSizeLimit
+const canvasMultX = .9
+const canvasMultY = .8
+canvas.width = window.innerWidth * canvasMultX
+canvas.height = window.innerHeight * canvasMultY
 ctx.lineWidth = minBrushSize
 ctx.strokeStyle = '#FFC400'
 ctx.lineJoin = 'round'
@@ -31,8 +34,8 @@ ctx.globalCompositeOperation = blendMode
 
 // resize tracker
 window.addEventListener('resize', () => {
-    canvas.width = window.innerWidth * canvasSizeLimit
-    canvas.height = window.innerHeight * canvasSizeLimit
+    canvas.width = window.innerWidth * canvasMultX
+    canvas.height = window.innerHeight * canvasMultY
 })
 
 // mouse and touch functionality
@@ -75,7 +78,6 @@ canvas.addEventListener('mousemove', mouseDraw)
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY]
-    ctx.lineWidth = minBrushSize
 })
 canvas.addEventListener('mouseup', () => isDrawing = false)
 canvas.addEventListener('mouseout', () => isDrawing = false)
@@ -86,10 +88,11 @@ canvas.addEventListener('touchstart', (e) => {
     var newY = e.touches[0].pageY - touchOffsetY
     isDrawing = true;
     [lastX, lastY] = [newX, newY]
-    ctx.lineWidth = minBrushSize
 })
 canvas.addEventListener('touchend', () => isDrawing = false)
 canvas.addEventListener('touchcancel', () => isDrawing = false)
 
 // clear canvas
 resetBtn.addEventListener('click', () => ctx.clearRect(0,0,canvas.width, canvas.height))
+bSize.addEventListener('click', () => ctx.lineWidth = minBrushSize)
+bColor.addEventListener('click', () => hue = 0)
