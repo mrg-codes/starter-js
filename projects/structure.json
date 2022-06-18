@@ -49,7 +49,7 @@
             "id": "6",
             "name": "Drum Kit",
             "reference": "./projects/drum-kit/",
-            "description": " 🥁 🎹 App that allows you to play basic sounds to create 🔥 awesome hit songs. ",
+            "description": "🥁 🎹 App that allows you to play basic sounds to create 🔥 awesome hit songs.",
             "main": "index.html",
             "logic": "index.js",
             "linktext": "Live Preview"
@@ -58,7 +58,7 @@
             "id": "7",
             "name": "Color Flipper",
             "reference": "./projects/color-flipper/",
-            "description": " 🟥 🟩 🟦 No explanation needed. An app that switches colors at the push of the 👇🚀 button. Pretty self explanatory.",
+            "description": "🟥 🟩 🟦 No explanation needed. An app that switches colors at the push of the 👇🚀 button. Pretty self explanatory.",
             "main": "index.html",
             "logic": "index.js",
             "linktext": "Live Preview"
@@ -77,6 +77,15 @@
             "name": "Array Cardio 2",
             "reference": "./projects/array-cardio-two/",
             "description": "Another, more in depth array practice project to really 🧠 understand the array manipulation and its ⚙️ workings.",
+            "main": "index.html",
+            "logic": "index.js",
+            "linktext": "Live Preview"
+        },
+        {
+            "id": "10",
+            "name": "HTML Canvas",
+            "reference": "./projects/html-canvas/",
+            "description": "🖍️ Drawing board for painting with the 🐭 mouse or ☝️ fingers on touch devices. Simple Canvas project ey'.",
             "main": "index.html",
             "logic": "index.js",
             "linktext": "Live Preview"

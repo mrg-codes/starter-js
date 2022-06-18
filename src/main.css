@@ -137,13 +137,12 @@ h4 {font-size: 1.25rem; text-transform: capitalize;}
 
 .container {
     display: flex;
+    position: relative;
     flex-flow: column;
+    align-items: center;
     margin: 0 auto;
     width: var(--max-width-cont);
-    top: 0;
     min-width: var(--min-width);
-    position: relative;
-    align-items: center;
 }
 
 /* Top Nav Styles Global */
@@ -152,7 +151,7 @@ nav {
     height: 3rem;
     width: 100%;
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: start;
     align-items: center;
     background-color: transparent;
@@ -192,9 +191,9 @@ nav {
 }
 
 /* navbar phone variant */
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
     nav {
-        position: relative
+        position: absolute;
     }
 }
 
@@ -659,7 +658,6 @@ footer::before {
     overflow: hidden;
     flex: 10 0 0;
     height: auto;
-    min-height: 100vh;
     background-color: var(--darkbg);
     box-shadow: inset 0 0 4rem var(--mid-glow);
 }
@@ -908,4 +906,11 @@ footer::before {
     text-transform: inherit;
     z-index: -1;
     background-color: var(--warning);
+}
+
+/* HTML Canvas styles */
+
+.canvas {
+    border-radius: .4rem;
+    box-shadow: 0 0 2rem .4rem var(--low-darken);
 }
