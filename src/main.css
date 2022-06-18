@@ -914,6 +914,14 @@ footer::before {
     overflow: hidden;
 }
 
+.canvas-box {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .canvas {
     border-radius: .4rem;
     box-shadow: 0 0 2rem .4rem var(--low-darken);

@@ -15,6 +15,7 @@ let dynamicBrushSize = true
 let maxBrushSize = 100
 let minBrushSize = 25
 let brishSizeStep = .05
+let blendMode = 'color'
 
 // canvas params
 const ctx = canvas.getContext('2d')
@@ -26,6 +27,7 @@ ctx.strokeStyle = '#FFC400'
 ctx.lineJoin = 'round'
 ctx.lineCap = 'round'
 ctx.lineWidth = minBrushSize
+ctx.globalCompositeOperation = blendMode
 
 // resize tracker
 window.addEventListener('resize', () => {
