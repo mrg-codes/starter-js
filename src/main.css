@@ -791,14 +791,28 @@ footer::before {
         color 150ms ease-in-out,
         background 150ms ease-in-out;
 }
+
 .action-link {
+    position: relative;
+    overflow: hidden;
     color: var(--secondary);
+    isolation: isolate;
     padding: .4rem 1rem;
     transition: all 150ms ease-in-out;
 }
+
 .action-link >* {
+    z-index: -1;
     padding: 0 .4rem 0 0;
 }
+
+.action-link span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
 .action-link:hover {
     text-decoration: underline;
 }

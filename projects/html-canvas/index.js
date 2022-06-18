@@ -1,8 +1,6 @@
 // grab elements
 const canvas = document.querySelector('#canvas')
-const resetBtn = document.querySelector('.nav-links a[data-action="reset"]')
-const bSize = document.querySelector('.canvas-btn[data-action="bSize"]')
-const bColor = document.querySelector('.canvas-btn[data-action="bColor"]')
+const controlBtn = document.querySelectorAll('[data-action]')
 
 // canvas vars
 let isDrawing = false
@@ -92,7 +90,14 @@ canvas.addEventListener('touchstart', (e) => {
 canvas.addEventListener('touchend', () => isDrawing = false)
 canvas.addEventListener('touchcancel', () => isDrawing = false)
 
-// clear canvas
-resetBtn.addEventListener('click', () => ctx.clearRect(0,0,canvas.width, canvas.height))
-bSize.addEventListener('click', () => ctx.lineWidth = minBrushSize)
-bColor.addEventListener('click', () => hue = 0)
+// clear controls
+controlBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        var action = btn.dataset.action
+        if(action == 'bColor') return hue = 0
+        if(action == 'bSize') return ctx.lineWidth = minBrushSize
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.lineWidth = minBrushSize
+        hue = 0
+    })
+})
